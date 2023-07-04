@@ -1,25 +1,27 @@
-import { siteConfig } from "~/config/site";
-import { LogoIcon } from "../icons";
+import Image from "next/image";
 import Link from "next/link";
+
+import { siteConfig } from "~/config/site";
 import { Button } from "../ui/button";
-import { cn } from "~/lib/utils";
+import Logo from "~/../public/images/logo.png";
 
 export default function Navbar() {
   return (
-    <header className="z-10 relative">
+    <header className="relative z-10">
       {/* Gradient */}
-      <div className="bg-conic-gradient absolute blur-md opacity-80 -translate-y-3.5 -z-10 h-full w-full" />
-      <nav className="relative px-8 py-3.5 justify-between flex items-center border-b bg-white border-neutral-200">
+      {/* <div className="absolute w-full h-full -translate-y-4 bg-conic-gradient blur-md opacity-80 -z-10" /> */}
+      <nav className="relative px-8 py-3.5 justify-between flex items-center bg-white">
         {/* LOGO */}
-        <div className="flex gap-2 items-center">
-          <p className="text-xl font-bold">{siteConfig.name}</p>
+        <div className="flex items-center gap-2">
+          {/* <p className="text-xl font-bold">{siteConfig.name}</p> */}
+          <Image src={Logo} width={35} height={35} alt="" />
         </div>
         {/* LINKS */}
         <div>
           <div className="flex gap-7">
             {siteConfig.mainNav.links.map((navItem, i) => (
               <Link href={navItem.link} key={i}>
-                <p className="text-base font-bold text-stone-600 hover:text-zinc-900 duration-300">
+                <p className="text-base font-bold duration-300 text-stone-600 hover:text-zinc-900">
                   {navItem.title}
                 </p>
               </Link>
@@ -30,7 +32,7 @@ export default function Navbar() {
         <div>
           <div>
             <Button size={"lg"}>
-              <p className="font-bold text-base">Signin</p>
+              <p className="text-base font-bold">Signin</p>
             </Button>
           </div>
         </div>
