@@ -12,14 +12,14 @@ export default function Navbar() {
       {/* <div className="absolute w-full h-full -translate-y-4 bg-conic-gradient blur-md opacity-80 -z-10" /> */}
       <nav className="relative px-8 py-3.5 justify-between flex items-center bg-white">
         {/* LOGO */}
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           {/* <p className="text-xl font-bold">{siteConfig.name}</p> */}
           <Image src={Logo} width={35} height={35} alt="" />
-        </div>
+        </Link>
         {/* LINKS */}
         <div>
           <div className="flex gap-7">
-            {siteConfig.mainNav.links.map((navItem, i) => (
+            {siteConfig.mainNav.map((navItem, i) => (
               <Link href={navItem.link} key={i}>
                 <p className="text-base font-bold duration-300 text-stone-600 hover:text-zinc-900">
                   {navItem.title}

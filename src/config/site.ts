@@ -4,20 +4,22 @@ export const siteConfig = {
   name: "Knockbot",
   shortName: "Kn",
   description: "Explore The whole new Era of AI Power Life.",
-  mainNav: {
-    links: [
-      {
-        title: "Showcase",
-        link: "/",
-      },
-      {
-        title: "Blog",
-        link: "/",
-      },
-      {
-        title: "Tools",
-        link: "/",
-      },
-    ],
+  mainNav: [
+    {
+      title: "Showcase",
+      link: "/",
+    },
+    {
+      title: "Blog",
+      link: "/blog",
+    },
+    {
+      title: "Tools",
+      link: "/",
+    },
+  ],
+  socialLinks: {
+    github: "https://github.com/codingwebsa",
+    twitter: "https://twitter.com/knockabid",
   },
 };
