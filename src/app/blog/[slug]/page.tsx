@@ -22,11 +22,12 @@ export async function generateMetadata({
     return;
   }
 
-  const { title, description, date: publishedTime, slug, image } = post;
+  const { title, description, date: publishedTime, slug, image, tags } = post;
 
   return {
     title,
     description,
+    keywords: tags,
     openGraph: {
       title,
       description,

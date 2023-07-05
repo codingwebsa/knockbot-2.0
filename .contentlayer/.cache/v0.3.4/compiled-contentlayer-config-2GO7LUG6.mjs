@@ -1,20 +1,45 @@
+// contentlayer.config.js
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
-import { siteConfig } from "./src/config/site";
+// src/config/site.ts
+var siteConfig = {
+  name: "Knockbot",
+  shortName: "Kn",
+  description: "Knockabid, Independent Front End Developer.",
+  siteUrl: "https://knockbot.vercel.app/",
+  mainNav: [
+    {
+      title: "Showcase",
+      link: "/"
+    },
+    {
+      title: "Blog",
+      link: "/blog"
+    },
+    {
+      title: "Tools",
+      link: "/"
+    }
+  ],
+  socialLinks: {
+    github: "https://github.com/codingwebsa",
+    twitter: "https://twitter.com/knockabid"
+  }
+};
 
-/** @type {import('contentlayer/source-files').ComputedFields} */
-const computedFields = {
+// contentlayer.config.js
+var computedFields = {
   slug: {
     type: "string",
-    resolve: (doc) => doc._raw.flattenedPath,
+    resolve: (doc) => doc._raw.flattenedPath
   },
   slugAsParams: {
     type: "string",
-    resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
+    resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/")
   },
   structuredData: {
     type: "object",
@@ -29,46 +54,44 @@ const computedFields = {
       url: `${siteConfig.siteUrl}/blog/${doc._raw.flattenedPath}`,
       author: {
         "@type": "Person",
-        name: "Abid",
-      },
-    }),
-  },
+        name: "Abid"
+      }
+    })
+  }
 };
-
-export const Blog = defineDocumentType(() => ({
+var Blog = defineDocumentType(() => ({
   name: "Blog",
   filePathPattern: `blog/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
       type: "string",
-      required: true,
+      required: true
     },
     date: {
       type: "string",
-      required: true,
+      required: true
     },
     description: {
       type: "string",
-      required: true,
+      required: true
     },
     image: {
       type: "string",
-      required: true,
+      required: true
     },
     category: {
       type: "string",
-      required: true,
+      required: true
     },
     tags: {
       type: "list",
-      of: { type: "string" },
-    },
+      required: true
+    }
   },
-  computedFields,
+  computedFields
 }));
-
-export default makeSource({
+var contentlayer_config_default = makeSource({
   contentDirPath: "src/content",
   documentTypes: [Blog],
   disableImportAliasWarning: true,
@@ -81,8 +104,6 @@ export default makeSource({
         {
           theme: "one-dark-pro",
           onVisitLine(node) {
-            // Prevent lines from collapsing in `display: grid` mode, and allow empty
-            // lines to be copy/pasted
             if (node.children.length === 0) {
               node.children = [{ type: "text", value: " " }];
             }
@@ -92,17 +113,22 @@ export default makeSource({
           },
           onVisitHighlightedWord(node) {
             node.properties.className = ["word--highlighted"];
-          },
-        },
+          }
+        }
       ],
       [
         rehypeAutolinkHeadings,
         {
           properties: {
-            className: ["anchor"],
-          },
-        },
-      ],
-    ],
-  },
+            className: ["anchor"]
+          }
+        }
+      ]
+    ]
+  }
 });
+export {
+  Blog,
+  contentlayer_config_default as default
+};
+//# sourceMappingURL=compiled-contentlayer-config-2GO7LUG6.mjs.map

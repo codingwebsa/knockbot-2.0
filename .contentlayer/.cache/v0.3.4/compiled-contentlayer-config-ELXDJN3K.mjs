@@ -83,6 +83,10 @@ var Blog = defineDocumentType(() => ({
     category: {
       type: "string",
       required: true
+    },
+    tags: {
+      type: "list",
+      of: { type: "string" }
     }
   },
   computedFields
@@ -127,4 +131,4 @@ export {
   Blog,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-KB4DBWBO.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-ELXDJN3K.mjs.map
