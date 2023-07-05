@@ -1,12 +1,9 @@
-"use client";
-
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Balancer from "react-wrap-balancer";
 
 import { allBlogs } from "contentlayer/generated";
 import { Mdx } from "~/components/mdx";
-import { siteConfig } from "~/config/site";
 
 interface Props {
   params: {
@@ -21,8 +18,33 @@ export async function generateMetadata({
     return post.slugAsParams === params.slug;
   });
 
+  if (!post) {
+    return;
+  }
+
+  const { title, description, date: publishedTime, slug, image } = post;
+
   return {
-    title: post?.title || "Hello",
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: "article",
+      publishedTime,
+      url: `${slug}`,
+      images: [
+        {
+          url: image,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
   };
 }
 
@@ -38,9 +60,9 @@ export default function BlogContentPage({ params }: Props) {
   return (
     <>
       <section className="mt-20">
-        {/* <script type="application/ld+json" suppressHydrationWarning>
+        <script type="application/ld+json" suppressHydrationWarning>
           {JSON.stringify(post.structuredData)}
-        </script> */}
+        </script>
         <div className="px-8 mx-auto w-fit">
           <h1 className="text-2xl font-bold tracking-tighter">
             <Balancer>{post.title}</Balancer>
