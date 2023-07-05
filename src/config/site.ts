@@ -3,7 +3,8 @@ export type siteConfigType = typeof siteConfig;
 export const siteConfig = {
   name: "Knockbot",
   shortName: "Kn",
-  description: "Explore The whole new Era of AI Power Life.",
+  description: "Knockabid, Independent Front End Developer.",
+  siteUrl: "https://knockbot.vercel.app/",
   mainNav: [
     {
       title: "Showcase",

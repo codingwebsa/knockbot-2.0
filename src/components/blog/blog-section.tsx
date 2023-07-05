@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { DemoDataType } from "~/app/blog/page";
+import { Blog } from "contentlayer/generated";
 import { cn } from "~/lib/utils";
 
 interface Props extends React.HtmlHTMLAttributes<HTMLDivElement> {
-  data: DemoDataType;
+  data: Blog[];
   title?: string;
 }
 
@@ -26,11 +26,11 @@ export default function BlogSection({
       )}
       <div className="grid grid-cols-3 gap-3 pr-4 gap-y-6">
         {data.map((blog, i) => (
-          <Link href={`/blog/${blog.slug}`} key={i}>
+          <Link href={`${blog.slug}`} key={i}>
             <div className="relative object-cover w-full h-auto aspect-[3/2]">
               <Image
-                src={blog.imageUrl}
-                className="rounded-2xl"
+                src={blog.image}
+                className="object-cover rounded-2xl"
                 fill
                 sizes="30vw"
                 alt=""
@@ -41,7 +41,7 @@ export default function BlogSection({
                 {blog.category}
               </p>
               <div className="w-2 h-2 mx-2 rounded-full bg-stone-600" />
-              <p className="text-slate-700">{blog.time}</p>
+              <p className="text-slate-700">{formatDate(blog.date)}</p>
             </div>
             <h3 className="mt-3 text-xl font-semibold">{blog.title}</h3>
           </Link>
@@ -49,4 +49,27 @@ export default function BlogSection({
       </div>
     </div>
   );
+}
+
+function formatDate(date: string) {
+  const currentDate = new Date();
+  const targetDate = new Date(date);
+
+  const yearsAgo = currentDate.getFullYear() - targetDate.getFullYear();
+  const monthsAgo = currentDate.getMonth() - targetDate.getMonth();
+  const daysAgo = currentDate.getDate() - targetDate.getDate();
+
+  let formattedDate = "";
+
+  if (yearsAgo > 0) {
+    formattedDate = `${yearsAgo}y ago`;
+  } else if (monthsAgo > 0) {
+    formattedDate = `${monthsAgo}mo ago`;
+  } else if (daysAgo > 0) {
+    formattedDate = `${daysAgo}d ago`;
+  } else {
+    formattedDate = "Today";
+  }
+
+  return `(${formattedDate})`;
 }

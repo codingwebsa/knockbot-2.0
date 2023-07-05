@@ -1,0 +1,93 @@
+---
+title: Use Supabase with Next.js
+description: Learn how to create a Supabase project, add some sample data to your database, and query the data from a Next.js app.
+image: /images/blog/supabase-with-nextjs/supabase.jpg
+category: Database
+date: 2023-07-05
+---
+
+### What is Supabase?
+
+Supabase is currently in early-Alpha .It is an open-source Firebase alternative. It adds realtime and RESTful APIs to your PostgreSQL database without a single line of code.
+Supabase is a tool in the Realtime Backend / API category of a tech stack.
+Supabase is an open source tool with 52.4K GitHub stars and 4K GitHub forks. Here’s a link to Supabase's open source repository on GitHub
+Who uses Supabase?
+
+## Get started
+
+### 1. Set up a Supabase project with sample data
+
+[Create a new project](https://supabase.com/dashboard/projects) in the Supabase Dashboard.
+
+After your project is ready, create a table in your Supabase database using the [SQL Editor](https://supabase.com/dashboard/project/_/sql) in the Dashboard.
+
+Use the following SQL statement to create a `countries` table with some sample data.
+
+```sql title="SQL_EDITOR"
+ -- Create the table
+ create table countries (
+   id serial primary key,
+   name text not null
+ );
+
+ -- Insert some sample data into the table
+ insert into countries (name) values ('United States');
+ insert into countries (name) values ('Canada');
+ insert into countries (name) values ('Mexico');
+```
+
+### 2. Create a Next.js app
+
+Use the `create-next-app` command and the `with-supabase` template, to create a Next.js app pre-configured with:
+
+- [Supabase Auth](https://supabase.com/docs/guides/auth/auth-helpers/nextjs)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://www.tailwindcss.com)
+
+```bash title="Terminal"
+npx create-next-app -e with-supabase my-app && cd my-app
+```
+
+### 3. Declare Supabase Environment Variables
+
+Rename `.env.local.example` to `.env.local` and populate with [your project's URL and Anon Key](https://supabase.com/dashboard/project/_/settings/api).
+
+```env title=".env.local"
+NEXT_PUBLIC_SUPABASE_URL=your-project-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+```
+
+### 4. Query Supabase data from Next.js
+
+Create a new file at `app/countries/page.tsx` and populate with the following.
+
+This will select all the rows from the `countries` table in Supabase and render them on the page.
+
+```tsx title="app/countries/page.tsx"
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
+
+export default async function Index() {
+  const supabase = createServerComponentClient({ cookies });
+
+  const { data: countries } = await supabase.from("countries").select();
+
+  return (
+    <ul className="my-auto">
+      {countries?.map((country) => (
+        <li key={country.id}>{country.name}</li>
+      ))}
+    </ul>
+  );
+}
+```
+
+### 5. Start the app
+
+Run the development server, go to [http://localhost:3000/countries](http://localhost:3000/countries) in a browser and you should see the list of countries.
+
+```bash title="Terminal"
+npm run dev
+```
+
+Get the full guide on [Supabase](https://supabase.com/docs/guides/getting-started/quickstarts/nextjs).
