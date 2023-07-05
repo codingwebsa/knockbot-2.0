@@ -2,19 +2,6 @@ const { withContentlayer } = require("next-contentlayer");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    turbo: {
-      loaders: {
-        ".md": {
-          loader: "@mdx-js/loader",
-          options: {
-            format: "md",
-          },
-        },
-        ".mdx": ["@mdx-js/loader"],
-      },
-    },
-  },
   images: {
     domains: ["cdn.dribbble.com"],
   },

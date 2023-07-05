@@ -33,6 +33,7 @@ module.exports = {
       fontFamily: {
         cabinet: ["var(--font-cabinet)"],
         nunito: ["var(--font-nunito)"],
+        titillium: ["var(--font-titillium)"],
       },
     },
   },

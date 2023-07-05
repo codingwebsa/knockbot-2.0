@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 import "~/styles/globals.css";
 import { siteConfig } from "~/config/site";
-import { cabinetFont, nunitoFont } from "~/lib/fonts";
+import { cabinetFont, nunitoFont, titilliumFont } from "~/lib/fonts";
 import { cn } from "~/lib/utils";
 import Navbar from "~/components/navbar/navbar";
 
@@ -25,7 +25,8 @@ export default function RootLayout({
         className={cn(
           "bg-gray-100 text-zinc-900 antialiased font-cabinet pb-20",
           cabinetFont.variable,
-          nunitoFont.variable
+          nunitoFont.variable,
+          titilliumFont.variable
         )}
       >
         <Navbar />

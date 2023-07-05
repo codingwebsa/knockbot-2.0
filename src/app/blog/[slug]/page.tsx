@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Balancer from "react-wrap-balancer";
 
+import "~/styles/blog.css";
 import { allBlogs } from "contentlayer/generated";
 import { Mdx } from "~/components/mdx";
 
