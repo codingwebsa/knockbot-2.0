@@ -1,9 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-
-import { siteConfig } from "~/config/site";
-import { Button } from "../ui/button";
-import Logo from "~/../public/images/logo.png";
+import Logo from "./logo";
+import Menu from "./menu";
+import Right from "./right";
 
 export default function Navbar() {
   return (
@@ -12,29 +9,14 @@ export default function Navbar() {
       {/* <div className="absolute w-full h-full -translate-y-4 bg-conic-gradient blur-md opacity-80 -z-10" /> */}
       <nav className="relative flex items-center justify-between px-8 py-2 bg-white">
         {/* LOGO */}
-        <Link href="/" className="flex items-center gap-2">
-          {/* <p className="text-xl font-bold">{siteConfig.name}</p> */}
-          <Image src={Logo} width={35} height={35} alt="" />
-        </Link>
+        <Logo />
         {/* LINKS */}
         <div>
-          <div className="flex gap-7">
-            {siteConfig.mainNav.map((navItem, i) => (
-              <Link href={navItem.link} key={i}>
-                <p className="text-base font-bold duration-300 text-stone-600 hover:text-zinc-900">
-                  {navItem.title}
-                </p>
-              </Link>
-            ))}
-          </div>
+          <Menu />
         </div>
         {/* ACTION BUTTONS */}
         <div>
-          <div>
-            <Button size={"lg"}>
-              <p className="text-base font-bold">Signin</p>
-            </Button>
-          </div>
+          <Right />
         </div>
       </nav>
     </header>
