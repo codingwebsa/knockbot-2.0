@@ -1,12 +1,13 @@
-import { Balancer } from "react-wrap-balancer";
 import { ChevronRightIcon } from "~/components/icons";
 import LogoCloud from "~/components/logo-cloud";
+import MyIntro from "~/components/my-intro";
+import { cn } from "~/lib/utils";
 
 export default function HomePage() {
   return (
     <div>
       <section className="mt-28">
-        <h1 className="font-bold text-center capitalize font-titillium text-gradient">
+        <h1 className="font-serif font-bold text-center capitalize text-gradient">
           <span className="text-8xl">Exceptional</span> <br />
           <span className="text-7xl">Wordpress sites.</span>
         </h1>
@@ -20,6 +21,10 @@ export default function HomePage() {
       </section>
       <section className="mt-16">
         <LogoCloud />
+      </section>
+
+      <section className="mt-32 mb-20">
+        <MyIntro />
       </section>
     </div>
   );
