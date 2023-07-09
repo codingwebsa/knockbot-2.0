@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "bg-gray-100 text-zinc-900 antialiased font-cabinet pb-20",
+          "bg-gray-100 text-zinc-900 antialiased font-cabinet pb-32",
           cabinetFont.variable,
           nunitoFont.variable,
           titilliumFont.variable

@@ -1,6 +1,7 @@
 import { ChevronRightIcon } from "~/components/icons";
 import LogoCloud from "~/components/logo-cloud";
 import MyIntro from "~/components/my-intro";
+import Works from "~/components/works/works";
 
 export default function HomePage() {
   return (
@@ -25,6 +26,10 @@ export default function HomePage() {
 
       <section className="mt-32 mb-20">
         <MyIntro />
+      </section>
+
+      <section id="work" className="pt-20">
+        <Works />
       </section>
     </div>
   );
