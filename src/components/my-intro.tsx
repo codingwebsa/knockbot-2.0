@@ -10,6 +10,7 @@ export default function MyIntro() {
         <motion.h2
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-6xl font-bold"
         >
@@ -20,6 +21,7 @@ export default function MyIntro() {
         <motion.p
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-lg text-slate-700"
         >
@@ -31,6 +33,7 @@ export default function MyIntro() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 0.3 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="absolute left-0 w-full h-full scale-x-125 -top-10 -z-20 intro-img-blur-bg blur-3xl opacity-30"
         />

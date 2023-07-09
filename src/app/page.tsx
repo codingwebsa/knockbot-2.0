@@ -1,7 +1,6 @@
 import { ChevronRightIcon } from "~/components/icons";
 import LogoCloud from "~/components/logo-cloud";
 import MyIntro from "~/components/my-intro";
-import { cn } from "~/lib/utils";
 
 export default function HomePage() {
   return (
@@ -19,6 +18,7 @@ export default function HomePage() {
           Start a project request <ChevronRightIcon size={25} />
         </button>
       </section>
+
       <section className="mt-16">
         <LogoCloud />
       </section>
