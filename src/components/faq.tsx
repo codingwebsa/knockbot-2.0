@@ -93,7 +93,7 @@ export default Faq;
 const AccordionItem = ({ header, text }: any) => {
   const [active, setActive] = useState(false);
   return (
-    <div className="single-faq mb-4 w-full rounded-lg border border-[#F3F4FE] bg-neutral-100 p-4 sm:p-8 lg:px-6 xl:px-8">
+    <div className="single-faq mb-4 w-full rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8">
       <button
         className={`faq-btn flex w-full text-left`}
         onClick={(e) => setActive(!active)}
