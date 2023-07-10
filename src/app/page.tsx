@@ -1,4 +1,5 @@
 import ClientReview from "~/components/client-review";
+import Faq from "~/components/faq";
 import { ChevronRightIcon } from "~/components/icons";
 import LogoCloud from "~/components/logo-cloud";
 import MyIntro from "~/components/my-intro";
@@ -39,6 +40,9 @@ export default function HomePage() {
 
       <section id="workflow" className="pt-40">
         <MyWorkflow />
+      </section>
+      <section id="faq" className="mt-10">
+        <Faq />
       </section>
     </div>
   );
