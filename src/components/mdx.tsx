@@ -32,7 +32,15 @@ function Paragraph(props: any) {
 }
 
 function RoundedImage(props: any) {
-  return <Image alt={props.alt} className="rounded-lg" {...props} />;
+  return (
+    <Image
+      alt={props.alt}
+      className="rounded-lg"
+      width={720}
+      height={720}
+      {...props}
+    />
+  );
 }
 
 function Callout(props: any) {
