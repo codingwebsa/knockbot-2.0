@@ -13,7 +13,9 @@ export default function Right() {
       transition={{ type: "spring" }}
     >
       <Button size={"lg"}>
-        <p className="text-base font-bold">Signin</p>
+        <a href="mailto:knockabid17@gmail.com" className="text-base font-bold">
+          Contact me
+        </a>
       </Button>
     </motion.div>
   );

@@ -21,7 +21,7 @@ export default function LogoCloud() {
       <div className="mx-auto mt-8">
         <Link
           href="/"
-          className="flex gap-2 p-1 px-3 text-sm border rounded-full border-slate-200"
+          className="flex gap-2 p-1 px-3 text-sm border rounded-full bg-white/40 border-slate-200"
         >
           Over 2500+ companies use our tools to better their business.{" "}
           <span className="flex items-center font-semibold text-teal-700">

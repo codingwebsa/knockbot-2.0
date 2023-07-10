@@ -6,6 +6,7 @@ import { cabinetFont, nunitoFont, titilliumFont } from "~/lib/fonts";
 import { cn } from "~/lib/utils";
 import Navbar from "~/components/navbar/navbar";
 import Footer from "~/components/footer";
+import Blob from "~/components/blob";
 
 export const metadata: Metadata = {
   title: {
@@ -33,6 +34,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <Blob />
       </body>
     </html>
   );
