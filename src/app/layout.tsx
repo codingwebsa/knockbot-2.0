@@ -5,6 +5,7 @@ import { siteConfig } from "~/config/site";
 import { cabinetFont, nunitoFont, titilliumFont } from "~/lib/fonts";
 import { cn } from "~/lib/utils";
 import Navbar from "~/components/navbar/navbar";
+import Footer from "~/components/footer";
 
 export const metadata: Metadata = {
   title: {
@@ -23,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "bg-gray-100 text-zinc-900 antialiased font-cabinet pb-32",
+          "bg-gray-100 text-zinc-900 antialiased font-cabinet",
           cabinetFont.variable,
           nunitoFont.variable,
           titilliumFont.variable
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <Navbar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
