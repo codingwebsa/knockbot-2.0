@@ -2,6 +2,7 @@ import ClientReview from "~/components/client-review";
 import { ChevronRightIcon } from "~/components/icons";
 import LogoCloud from "~/components/logo-cloud";
 import MyIntro from "~/components/my-intro";
+import MyWorkflow from "~/components/my-workflow/my-workflow";
 import Works from "~/components/works/works";
 
 export default function HomePage() {
@@ -34,6 +35,10 @@ export default function HomePage() {
       </section>
       <section id="review" className="pt-40">
         <ClientReview />
+      </section>
+
+      <section id="workflow" className="pt-40">
+        <MyWorkflow />
       </section>
     </div>
   );
