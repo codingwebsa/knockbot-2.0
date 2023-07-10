@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 import styles from "~/styles/work.module.css";
 
 export default function Work({ index, title, setModal }: any) {
