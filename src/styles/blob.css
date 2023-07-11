@@ -14,13 +14,11 @@
   }
 }
 
-.blob {
+#blob {
   background-color: white;
   height: 29vmax;
   width: 29vmax;
   position: fixed;
-  left: 50%;
-  top: 50%;
   translate: -50% -50%;
   border-radius: 50%;
   background: linear-gradient(to right, aquamarine, mediumpurple);
@@ -28,7 +26,7 @@
   opacity: 0.6;
 }
 
-.blur {
+#blur {
   height: 100%;
   width: 100%;
   position: fixed;

@@ -7,6 +7,7 @@ import { cn } from "~/lib/utils";
 import Navbar from "~/components/navbar/navbar";
 import Footer from "~/components/footer";
 import Blob from "~/components/blob";
+import CustomCursor from "~/components/custom-cursor";
 
 export const metadata: Metadata = {
   title: {
@@ -34,7 +35,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <Blob />
+        <CustomCursor />
       </body>
     </html>
   );
