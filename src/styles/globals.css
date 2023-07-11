@@ -35,7 +35,7 @@
   .text-gradient {
     background: linear-gradient(
       to right bottom,
-      hsl(179, 84%, 5%) 50%,
+      hsl(180, 88%, 3%) 50%,
       rgba(255, 255, 255, 20%)
     );
     background-clip: text;

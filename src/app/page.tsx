@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <div>
       <section className="mt-28">
-        <h1 className="font-serif font-bold text-center capitalize text-gradient">
+        <h1 className="font-bold text-center capitalize font-cabinet text-gradient">
           <span className="text-8xl">Exceptional</span> <br />
           <span className="text-7xl">Wordpress sites.</span>
         </h1>

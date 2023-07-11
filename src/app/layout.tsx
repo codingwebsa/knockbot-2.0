@@ -6,7 +6,6 @@ import { cabinetFont, nunitoFont, titilliumFont } from "~/lib/fonts";
 import { cn } from "~/lib/utils";
 import Navbar from "~/components/navbar/navbar";
 import Footer from "~/components/footer";
-import Blob from "~/components/blob";
 import CustomCursor from "~/components/custom-cursor";
 
 export const metadata: Metadata = {

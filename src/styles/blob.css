@@ -23,7 +23,7 @@
   border-radius: 50%;
   background: linear-gradient(to right, aquamarine, mediumpurple);
   animation: rotate 20s infinite;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 #blur {
