@@ -1,0 +1,132 @@
+---
+title: Setup twrnc with expo project.
+description: Learn how to easily setup a expo project with tailwindcss.
+image: /images/blog/setup-tailwind-with-react-native-expo/thumbnail.png
+category: Database
+date: 2023-07-25
+tags:
+  - tailwindcss
+  - twrnc
+  - react-native-expo
+  - tailwind intigration
+---
+
+<Image
+  src="/images/blog/setup-tailwind-with-react-native-expo/thumbnail.png"
+  width={720}
+  height={720}
+/>
+
+## Introduction
+
+Tailwind CSS has given us a lot of freedom in how we design web components. As a result, it has gained widespread acceptability among developers and IT enterprises.
+
+Tailwind CSS is a highly flexible, low-level, utility-first CSS framework for creating user interfaces quickly.
+
+React Native combines the greatest aspects of native development with React, a world-class JavaScript library for developing user interfaces.
+
+## Installation
+
+First we need to install the `twrnc` package by the following command.
+
+```bash
+npm install twrnc
+```
+
+## Intellisense
+
+To get proper intellisense in vscode read the following instructions.
+
+- Install [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) plugin.
+- Go to `settings.json` and paste the following code.
+
+```json title="settings.json"
+"tailwindCSS.classAttributes": [
+    // ...
+    "style"
+],
+// ...
+"tailwindCSS.experimental.classRegex": [
+    "tw`([^`]*)", // tw`...`
+    "tw=\"([^\"]*)", // <div tw="..." />
+    "tw={\"([^\"}]*)", // <div tw={"..."} />
+    "tw\\.\\w+`([^`]*)", // tw.xxx`...`
+    "tw\\(.*?\\)`([^`]*)" // tw(Component)`...`
+]
+// ...
+```
+
+## Usage
+
+You can import the main `tw` function and reach for tw.style only when you need it:
+
+```jsx title="App.js"
+import tw from "twrnc";
+
+const MyComponent = () => (
+  <View style={tw`bg-blue-100`}>
+    <Text style={tw.style("text-md", invalid && "text-red-500")}>Hello</Text>
+  </View>
+);
+```
+
+...or if the tagged template function isn't your cup of tea, just import tw.style as tw:
+
+```jsx title="App.js"
+import { style as tw } from "twrnc";
+
+const MyComponent = () => (
+  <View style={tw("bg-blue-100", invalid && "text-red-500")}></View>
+);
+```
+
+## Customizations
+
+You can use twrnc right out of the box if you haven't customized your `tailwind.config.js` file at all. But more likely you've got some important app-specific tailwind customizations you'd like to use. For that reason, we expose the ability to create a **custom configured version** of the tw function object.
+
+```jsx title="lib/tailwind.js"
+import { create } from "twrnc";
+
+// create the customized version...
+const tw = create(require(`../../tailwind.config.js`)); // <- your path may differ
+
+// ... and then this becomes the main function your app uses
+export default tw;
+```
+
+...and in your component files import your own customized version of the function instead:
+
+```jsx title="something.js"
+import tw from "./lib/tailwind";
+```
+
+<Callout emoji="⚠">
+  Make sure to use `module.exports = {}` instead of `export default {}` in your
+  `tailwind.config.js` file, as the latter is not supported.
+</Callout>
+
+## Adding custom classes
+
+To add custom utilities, use the [plugin method](https://tailwindcss.com/docs/adding-new-utilities#using-a-plugin) described in the tailwind docs, instead of writing to a `.css` file.
+
+```jsx title="tailwind.config.js"
+const plugin = require("tailwindcss/plugin");
+
+module.exports = {
+  plugins: [
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        ".btn": {
+          padding: 3,
+          borderRadius: 10,
+          textTransform: `uppercase`,
+          backgroundColor: `#333`,
+        },
+        ".resize-repeat": {
+          resizeMode: `repeat`,
+        },
+      });
+    }),
+  ],
+};
+```

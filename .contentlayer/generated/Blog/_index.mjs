@@ -2,5 +2,6 @@
 
 import blog__supabaseWithNextjsMdx from './blog__supabase-with-nextjs.mdx.json' assert { type: 'json' }
 import blog__whyWeNeedAGoodWebsiteMdx from './blog__why-we-need-a-good-website.mdx.json' assert { type: 'json' }
+import blog__setupTailwindWithReactNativeExpoMdx from './blog__setup-tailwind-with-react-native-expo.mdx.json' assert { type: 'json' }
 
-export const allBlogs = [blog__supabaseWithNextjsMdx, blog__whyWeNeedAGoodWebsiteMdx]
+export const allBlogs = [blog__supabaseWithNextjsMdx, blog__whyWeNeedAGoodWebsiteMdx, blog__setupTailwindWithReactNativeExpoMdx]

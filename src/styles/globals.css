@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+/* * {
   cursor: none !important;
-}
+} */
 
 ::-webkit-scrollbar {
   display: none;
