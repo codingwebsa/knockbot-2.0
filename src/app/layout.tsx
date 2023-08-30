@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Loglib from "@loglib/tracker/react";
 
 import "~/styles/globals.css";
 import { siteConfig } from "~/config/site";
@@ -34,6 +35,11 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <Loglib
+          config={{
+            id: "knockbot",
+          }}
+        />
         {/* <CustomCursor /> */}
       </body>
     </html>
