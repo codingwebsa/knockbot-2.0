@@ -6,7 +6,7 @@ import { cabinetFont, nunitoFont, titilliumFont } from "~/lib/fonts";
 import { cn } from "~/lib/utils";
 import Navbar from "~/components/navbar/navbar";
 import Footer from "~/components/footer";
-import CustomCursor from "~/components/custom-cursor";
+// import CustomCursor from "~/components/custom-cursor";
 
 export const metadata: Metadata = {
   title: {

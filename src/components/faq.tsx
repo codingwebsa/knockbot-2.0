@@ -26,30 +26,22 @@ const Faq = () => {
         <div className="flex flex-wrap -mx-4">
           <div className="w-full px-4 lg:w-1/2">
             <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              header="Getting Started?"
+              text="To begin, all you need to do is schedule a meeting with me. During our discussion, we'll delve into the specifics of your company and explore how our services can enhance your business. I'll provide you with comprehensive details on the ways we can contribute to your growth."
             />
             <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
-            />
-            <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              header="What are the expenses involved?"
+              text="The cost varies based on the scope of your project. For larger projects, the pricing may reflect the extended benefits and resources we dedicate to ensure its success."
             />
           </div>
           <div className="w-full px-4 lg:w-1/2">
             <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              header="Which Website building platforms do you utilize?"
+              text="We primarily use WordPress for its high-performance capabilities. However, we're also proficient in creating custom websites through coding to cater to specific needs."
             />
             <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
-            />
-            <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              header="What is the typical project duration?"
+              text="Our timeline varies based on project size. Smaller projects are usually completed within a week, including revisions. For larger endeavors, the timeframe can extend up to a month to ensure comprehensive and meticulous execution."
             />
           </div>
         </div>

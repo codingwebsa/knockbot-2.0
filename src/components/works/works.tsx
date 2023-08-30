@@ -8,6 +8,11 @@ import Modal from "./modal";
 
 const projects = [
   {
+    title: "Uptakes",
+    src: "/images/showcase/uptakes.png",
+    color: "#fafaf9",
+  },
+  {
     title: "C2 Montreal",
     src: "/images/showcase/1.webp",
     color: "#000000",

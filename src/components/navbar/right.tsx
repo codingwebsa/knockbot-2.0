@@ -13,8 +13,12 @@ export default function Right() {
       transition={{ type: "spring" }}
     >
       <Button size={"lg"}>
-        <a href="mailto:knockabid17@gmail.com" className="text-base font-bold">
-          Contact me
+        <a
+          href="https://calendly.com/Faughster/website"
+          className="text-base font-bold"
+          target="_blank"
+        >
+          Book a Call
         </a>
       </Button>
     </motion.div>

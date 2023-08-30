@@ -75,49 +75,41 @@ export const reviews = [
   {
     name: "Tiffany Chang",
     image: "/images/review/1.webp",
-    role: "Product Manager",
-    companyImage: "/images/review/sanity.png",
+    role: "Founder",
+    companyImage: "/images/review/aero.png",
     review:
-      "Moritz exceeded our expectations on implementation and collaboration. His detail orientation and deep implementation expertise elevated our designs. Moritz truly owns his craft.",
+      "Expertly transformed my vision into a stunning WordPress site. Faughster is the go-to developer for top-notch websites.",
   },
   {
     name: "Marri Martin",
-    image: "/images/review/2.webp",
+    image: "/images/review/17.jpg",
     role: "Product Manager",
-    companyImage: "/images/review/contentful.png",
+    companyImage: "/images/review/architecture.png",
     review:
-      "Moritz exceeded our expectations on implementation and collaboration. His detail orientation and deep implementation expertise elevated our designs. Moritz truly owns his craft.",
+      "Faughster delivered beyond expectations, crafting a captivating WordPress site that reflects my brand perfectly. Swift problem-solving and on-time delivery.",
   },
   {
     name: "Welf Wu",
-    image: "/images/review/3.webp",
-    role: "Product Manager",
-    companyImage: "/images/review/deepmind.png",
+    image: "/images/review/29.jpg",
+    role: "Co-Worker",
+    companyImage: "/images/review/cooper-carry.png",
     review:
-      "Moritz exceeded our expectations on implementation and collaboration. His detail orientation and deep implementation expertise elevated our designs. Moritz truly owns his craft.",
+      "User-friendly WordPress site, thanks to Faughster's collaboration and creative insights. An enjoyable journey from concept to launch.",
   },
   {
     name: "Lee Abyss",
-    image: "/images/review/4.webp",
-    role: "Product Manager",
-    companyImage: "/images/review/disney.png",
+    image: "/images/review/36.jpg",
+    role: "Manager",
+    companyImage: "/images/review/kpmg.png",
     review:
-      "Moritz exceeded our expectations on implementation and collaboration. His detail orientation and deep implementation expertise elevated our designs. Moritz truly owns his craft.",
+      "Impressive WordPress skills; Faughster optimized my site for performance and aesthetics. Professional, dedicated, and technically proficient.",
   },
   {
     name: "Kelly Macy",
-    image: "/images/review/5.webp",
-    role: "Product Manager",
-    companyImage: "/images/review/openai.png",
+    image: "/images/review/40.jpg",
+    role: "Leader",
+    companyImage: "/images/review/paraloco.png",
     review:
-      "Moritz exceeded our expectations on implementation and collaboration. His detail orientation and deep implementation expertise elevated our designs. Moritz truly owns his craft.",
-  },
-  {
-    name: "Jim Welson",
-    image: "/images/review/6.webp",
-    role: "Product Manager",
-    companyImage: "/images/review/workos.png",
-    review:
-      "Moritz exceeded our expectations on implementation and collaboration. His detail orientation and deep implementation expertise elevated our designs. Moritz truly owns his craft.",
+      "Exceeded expectations with a WordPress site beyond my imagination. Faughster's commitment and friendly approach made the experience fantastic.",
   },
 ];

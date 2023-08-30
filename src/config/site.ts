@@ -7,20 +7,20 @@ export const siteConfig = {
   siteUrl: "https://knockbot.vercel.app/",
   mainNav: [
     {
+      title: "Home",
+      link: "/",
+    },
+    {
       title: "Showcase",
-      link: "/showcase",
+      link: "#work",
     },
     {
       title: "Blog",
       link: "/blog",
     },
-    {
-      title: "Tools",
-      link: "/",
-    },
   ],
   socialLinks: {
-    github: "https://github.com/codingwebsa",
+    github: "https://github.com/AbidHo",
     twitter: "https://twitter.com/knockabid",
   },
 };

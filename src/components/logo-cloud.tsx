@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+
 import { ChevronRightIcon } from "./icons";
 
 export default function LogoCloud() {
@@ -35,10 +36,9 @@ export default function LogoCloud() {
 }
 
 const logos = [
-  "/images/logo-cloud/contentful.png",
-  "/images/logo-cloud/deepmind.png",
-  "/images/logo-cloud/disney.png",
-  "/images/logo-cloud/openai.png",
-  "/images/logo-cloud/sanity.png",
-  "/images/logo-cloud/workos.png",
+  "/images/logo-cloud/bow-tied.png",
+  "/images/logo-cloud/media-smack.png",
+  "/images/logo-cloud/uptakes.png",
+  "/images/logo-cloud/lebouquetfleurs.png",
+  "/images/logo-cloud/riverside.svg",
 ];

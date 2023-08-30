@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+import MyImage from "~/../public/images/me.jpg";
+
 export default function MyIntro() {
   return (
     <div className="flex items-center justify-between max-w-6xl gap-16 mx-auto">
@@ -23,10 +25,10 @@ export default function MyIntro() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-lg text-slate-700"
+          className="mt-4 text-lg text-slate-700"
         >
-          Knockbot turns your designs into pixel-perfect <br /> and
-          easy-to-manage wordpress experiences.
+          We turns your designs into pixel-perfect <br /> and easy-to-manage
+          wordpress experiences.
         </motion.p>
       </div>
       <div className="relative">
@@ -39,11 +41,12 @@ export default function MyIntro() {
         />
         <Image
           className="relative h-auto rounded-2xl"
-          src="/images/me.jpg"
+          src={MyImage}
           alt=""
+          placeholder="blur"
           width={480}
-          priority
           height={530}
+          priority
         />
       </div>
     </div>

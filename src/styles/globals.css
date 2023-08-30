@@ -10,6 +10,11 @@
   display: none;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-margin: 100px;
+}
+
 @layer utilities {
   .bg-conic-gradient {
     background: linear-gradient(

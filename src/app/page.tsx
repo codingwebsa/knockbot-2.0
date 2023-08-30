@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ClientReview from "~/components/client-review";
 import Faq from "~/components/faq";
 import { ChevronRightIcon } from "~/components/icons";
@@ -18,9 +19,13 @@ export default function HomePage() {
           High-end Wordpress development for design-driven companies <br />{" "}
           where attention to detail and passionate dedication matter.
         </p>
-        <button className="flex items-center p-2 px-4 mx-auto mt-8 text-xl font-semibold text-teal-700 duration-300 rounded-md hover:bg-teal-100/40">
+        <Link
+          href="https://calendly.com/Faughster/website"
+          target="_blank"
+          className="flex items-center p-2 px-4 mx-auto mt-8 text-xl font-semibold text-teal-700 duration-300 rounded-md hover:bg-teal-100/40 w-fit"
+        >
           Start a project request <ChevronRightIcon size={25} />
-        </button>
+        </Link>
       </section>
 
       <section className="mt-16">
