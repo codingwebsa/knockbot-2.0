@@ -8,7 +8,7 @@ import { siteConfig } from "~/config/site";
 
 export default function Menu() {
   return (
-    <div className="flex gap-7">
+    <div className="flex gap-3 md:gap-7">
       {siteConfig.mainNav.map((navItem, i) => (
         <motion.div
           key={i}

@@ -12,7 +12,7 @@ export default function Right() {
       animate={{ scale: 1, y: 0 }}
       transition={{ type: "spring" }}
     >
-      <Button size={"lg"}>
+      <Button>
         <a
           href="https://calendly.com/Faughster/website"
           className="text-base font-bold"

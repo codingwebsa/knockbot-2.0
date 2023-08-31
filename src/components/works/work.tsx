@@ -13,8 +13,8 @@ export default function Work({ index, title, setModal }: any) {
       }}
       className={styles.project}
     >
-      <h2>{title}</h2>
-      <p>Design & Development</p>
+      <h2 className="text-xl md:text-4xl">{title}</h2>
+      <p className="hidden md:block">Design & Development</p>
     </div>
   );
 }

@@ -11,11 +11,11 @@ import { cn } from "~/lib/utils";
 export default function ClientReview() {
   return (
     <div>
-      <p className="text-6xl font-bold text-center font-cabinet">
+      <p className="text-3xl font-bold text-center md:text-3xl lg:text-6xl font-cabinet">
         What my clients <br />
         are saying.
       </p>
-      <div className="mt-20">
+      <div className="mt-12 md:mt-20">
         <div className="max-w-md mx-auto">
           <Swiper
             effect={"cards"}
@@ -39,13 +39,13 @@ export default function ClientReview() {
                       src={review.image}
                       width={80}
                       height={80}
-                      className="ml-12 rounded-lg"
+                      className="h-auto ml-12 rounded-lg w-14 aspect-square sm:w-16 md:w-20"
                       alt=""
                     />
-                    <p className="mt-10 ml-12 mr-4 text-2xl font-medium">
+                    <p className="mt-10 ml-12 mr-4 text-lg font-medium md:text-2xl">
                       {review.review}
                     </p>
-                    <div className="flex items-center justify-between px-12 mt-20">
+                    <div className="flex items-center justify-between px-12 mt-12 md:mt-20">
                       <div className="flex flex-col text-xl">
                         <p className="font-semibold">{review.name}</p>
                         <p className="">{review.role}</p>

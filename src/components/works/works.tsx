@@ -38,8 +38,8 @@ export default function Works() {
   const [modal, setModal] = useState({ active: false, index: 0 });
 
   return (
-    <main className="max-w-5xl mx-auto">
-      <p className="my-20 text-6xl font-bold text-center font-cabinet">
+    <main className="container">
+      <p className="my-20 text-3xl font-bold text-center md:text-3xl lg:text-6xl font-cabinet">
         A small selection <br /> of my work.
       </p>
       <div className={styles.body}>

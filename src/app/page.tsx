@@ -12,10 +12,13 @@ export default function HomePage() {
     <div>
       <section className="mt-28">
         <h1 className="font-bold text-center capitalize font-cabinet text-gradient">
-          <span className="text-8xl">Exceptional</span> <br />
-          <span className="text-7xl">Wordpress sites.</span>
+          <span className="text-4xl md:text-4xl lg:text-8xl">Exceptional</span>{" "}
+          <br />
+          <span className="text-3xl md:text-3xl lg:text-7xl">
+            Wordpress sites.
+          </span>
         </h1>
-        <p className="mt-4 text-xl text-center text-zinc-700">
+        <p className="mt-4 text-sm text-center sm:text-base md:text-lg text-zinc-700">
           High-end Wordpress development for design-driven companies <br />{" "}
           where attention to detail and passionate dedication matter.
         </p>
@@ -36,10 +39,10 @@ export default function HomePage() {
         <MyIntro />
       </section>
 
-      <section id="work" className="pt-20">
+      <section id="work" className="pt-0 md:pt-20">
         <Works />
       </section>
-      <section id="review" className="pt-40">
+      <section id="review" className="pt-10 md:pt-40">
         <ClientReview />
       </section>
 

@@ -7,14 +7,14 @@ import MyImage from "~/../public/images/me.jpg";
 
 export default function MyIntro() {
   return (
-    <div className="flex items-center justify-between max-w-6xl gap-16 mx-auto">
+    <div className="flex flex-col-reverse items-center justify-center max-w-6xl gap-16 mx-auto md:justify-between md:flex-row">
       <div>
         <motion.h2
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-6xl font-bold"
+          className="text-3xl font-bold md:text-3xl lg:text-6xl"
         >
           They call me the
           <br />

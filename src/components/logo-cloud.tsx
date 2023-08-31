@@ -6,7 +6,7 @@ import { ChevronRightIcon } from "./icons";
 export default function LogoCloud() {
   return (
     <div className="flex flex-col justify-center">
-      <div className="flex items-center gap-8 mx-auto">
+      <div className="flex items-center max-w-full gap-8 mx-auto">
         {logos.map((url) => (
           <div key={url}>
             <Image
@@ -22,7 +22,7 @@ export default function LogoCloud() {
       <div className="mx-auto mt-8">
         <Link
           href="/"
-          className="flex gap-2 p-1 px-3 text-sm border rounded-full bg-white/40 border-slate-200"
+          className="flex flex-col gap-2 p-1 px-3 text-sm border rounded-full md:flex-row bg-white/40 border-slate-200"
         >
           Over 2500+ companies use our tools to better their business.{" "}
           <span className="flex items-center font-semibold text-teal-700">
